@@ -1,0 +1,8 @@
+Options All -Indexes
+Options -MultiViews
+
+RewriteEngine On
+
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]
